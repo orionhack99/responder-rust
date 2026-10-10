@@ -1,0 +1,16 @@
+/target
+
+# Runtime artifacts
+/logs/
+/Responder.db
+*.db-wal
+*.db-shm
+
+# Locally generated TLS material
+/certs/responder.crt
+/certs/responder.key
+
+# Spec Kit workflow scaffolding (not part of the published project)
+/.opencode/
+/.specify/
+/specs/

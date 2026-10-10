@@ -1,0 +1,91 @@
+[package]
+name = "responder"
+version = "0.1.0"
+edition = "2024"
+
+[[test]]
+name = "test_util"
+path = "tests/unit/test_util.rs"
+
+[[test]]
+name = "test_ntlm"
+path = "tests/unit/test_ntlm.rs"
+
+[[test]]
+name = "test_dns_poison"
+path = "tests/unit/test_dns_poison.rs"
+
+[[test]]
+name = "test_challenge"
+path = "tests/unit/test_challenge.rs"
+
+[[test]]
+name = "test_config"
+path = "tests/unit/test_config.rs"
+
+[[test]]
+name = "test_output_formats"
+path = "tests/contract/test_output_formats.rs"
+
+[[test]]
+name = "test_config_compat"
+path = "tests/contract/test_config_compat.rs"
+
+[[test]]
+name = "test_cli_surface"
+path = "tests/contract/test_cli_surface.rs"
+
+[[test]]
+name = "test_smb_capture"
+path = "tests/integration/test_smb_capture.rs"
+
+[[test]]
+name = "test_http_capture"
+path = "tests/integration/test_http_capture.rs"
+
+[[test]]
+name = "test_mail_services"
+path = "tests/integration/test_mail_services.rs"
+
+[[test]]
+name = "test_review_export"
+path = "tests/integration/test_review_export.rs"
+
+[[test]]
+name = "test_dns_dhcp"
+path = "tests/integration/test_dns_dhcp.rs"
+
+[[test]]
+name = "test_analyze_mode"
+path = "tests/integration/test_analyze_mode.rs"
+
+[[test]]
+name = "test_soak"
+path = "tests/integration/test_soak.rs"
+
+[[test]]
+name = "test_ldap_winrm"
+path = "tests/integration/test_ldap_winrm.rs"
+
+[dependencies]
+anyhow = "1.0.104"
+base64 = "0.23.1"
+chrono = { version = "0.4.45", features = ["clock"] }
+clap = { version = "4.6.7", features = ["derive"] }
+configparser = "3.3.0"
+hickory-proto = "0.26.3"
+libc = "0.2.190"
+md5 = "0.8.1"
+ntlmssp = "0.1.1"
+pnet = "0.35.0"
+rand = "0.10.3"
+rcgen = "0.14.10"
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+rustls = "0.23.45"
+rustls-pemfile = "2.2.0"
+socket2 = "0.6.5"
+thiserror = "2.0.21"
+tokio = { version = "1.53.2", features = ["full"] }
+tokio-rustls = "0.26.6"
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
