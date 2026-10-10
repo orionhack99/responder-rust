@@ -1,5 +1,7 @@
 # Responder (Rust)
 
+[![CI](https://github.com/orionhack99/responder-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/orionhack99/responder-rust/actions/workflows/ci.yml)
+
 A Rust reimplementation of [lgandx/Responder](https://github.com/lgandx/Responder): an
 LLMNR/NBT-NS/mDNS poisoner paired with a set of rogue authentication servers that capture
 NetNTLM hashes and cleartext credentials from clients that resolve names incorrectly.
@@ -171,6 +173,25 @@ cargo fmt --check
 ```
 
 See [`docs/VALIDATION.md`](docs/VALIDATION.md) for the validation record and known gaps.
+
+## CI/CD
+
+GitHub Actions workflows live in `.github/workflows/`:
+
+- **`ci.yml`** — on every push/PR to `main`: `cargo fmt --check`, `cargo clippy -D warnings`,
+  `cargo test`, a release build, and a `cargo-audit` dependency scan.
+- **`release.yml`** — on tags matching `v*`: builds release binaries for
+  `x86_64-unknown-linux-gnu` and `aarch64-apple-darwin`, and publishes them as GitHub Release
+  assets.
+
+Cut a release by pushing a tag:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+Dependency and GitHub Actions updates are proposed weekly via `.github/dependabot.yml`.
 
 ## Disclaimer & attribution
 
