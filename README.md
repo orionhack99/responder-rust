@@ -1,6 +1,12 @@
-# Responder (Rust)
+<p align="center">
+  <img src="assets/banner.png" alt="Responder (Rust) — LLMNR/NBT-NS/mDNS poisoning and credential capture" width="100%">
+</p>
 
-[![CI](https://github.com/orionhack99/responder-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/orionhack99/responder-rust/actions/workflows/ci.yml)
+<p align="center">
+  <a href="https://github.com/orionhack99/responder-rust/actions/workflows/ci.yml"><img src="https://github.com/orionhack99/responder-rust/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
+
+# Responder (Rust)
 
 A Rust reimplementation of [lgandx/Responder](https://github.com/lgandx/Responder): an
 LLMNR/NBT-NS/mDNS poisoner paired with a set of rogue authentication servers that capture
